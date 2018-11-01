@@ -10,7 +10,7 @@
       <div class="four wide column">
         <h4 class="ui header">Autoren</h4>
         <span *ngFor="let author of book.authors; last as l">
-          {{ author }}<span *ngIf='!l'>, </span>
+          {{ author }}<span *ngIf='!l'>,<br/></span>
         </span>
       </div>
       <div class="four wide column">
@@ -26,7 +26,6 @@
         <i *ngFor="let r of getRating(book.rating)" class="yellow star icon"></i>
       </div>
     </div>
-    <button (click)="showBookList()" class="ui red button">Zurück zur Buchliste</button>
   </div>
   <div class="sixteen wide column">
     <h3 class="ui header">Beschreibung</h3>

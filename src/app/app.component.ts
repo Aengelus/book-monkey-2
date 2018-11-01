@@ -1,8 +1,13 @@
-import { Book } from './shared/book';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'bm-root',
+  templateUrl: 'app.component.html'
+})
+export class AppComponent { }
+
+
+/*
   template:
     `<bm-book-list *ngIf="listOn"
       (showDetailsEvent)="showDetails($event)"></bm-book-list>
@@ -10,21 +15,4 @@ import { Component } from '@angular/core';
       (showListEvent)="showList()"
      [book]="book">
      </bm-book-details>`
-})
-export class AppComponent {
-  listOn = true;
-  detailsOn = false;
-
-  book: Book;
-
-  showList() {
-    this.listOn = true;
-    this.detailsOn = false;
-  }
-
-  showDetails(book: Book) {
-    this.book = book;
-    this.listOn = false;
-    this.detailsOn = true;
-  }
-}
+*/

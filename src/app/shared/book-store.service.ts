@@ -31,6 +31,16 @@ export class BookStoreService {
   }
 
   getAll() {
+    // Display the books in a table in the console
+    console.table(this.books);
     return this.books;
+  }
+
+  // console.log('Hallo', 'Welt')
+  // console.info('Eine Info-Meldung')
+  // console.error('Fehler', { wirklich: 'wichtig' })
+
+  getSingle(isbn) {
+    return this.books.find(book => book.isbn === isbn);
   }
 }
